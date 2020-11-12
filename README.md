@@ -1,1 +1,1 @@
-# griotlist
+# GriotList
