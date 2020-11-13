@@ -1,0 +1,28 @@
+{
+  "name": "griotlist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delanyodevio/griotlist.git"
+  },
+  "keywords": [],
+  "author": "delanyo agbenyo (delanyodevio)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/delanyodevio/griotlist/issues"
+  },
+  "homepage": "https://github.com/delanyodevio/griotlist#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "clean-css": "^4.2.3",
+    "dotenv": "^8.2.0",
+    "moment": "^2.29.1",
+    "slugify": "^1.4.6",
+    "uglify-es": "^3.3.9"
+  }
+}
