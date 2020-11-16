@@ -1,1 +1,17 @@
-["delanyo model", "agbenyo model"]
+[
+  {
+    "name": "delanyo model",
+    "owner": "delanyo rogers",
+    "email": "delanyo@gmail.com",
+    "service": "fashion design",
+    "link": "delanyo model"
+  },
+
+  {
+    "name": "mawuli mason services",
+    "owner": "Mawuli Roberts",
+    "email": "mawuli@gmail.com",
+    "service": "fashion design",
+    "link": "mawuli mason services"
+  }
+]

@@ -1,7 +1,142 @@
 ---
 layout: layouts/level_two.html
-change: "yearly"
 permalink: "account/signup.html"
-headline: "Login to your dashboard"
-description: "Login to your dashboard"
+headline: "Get a fre pro businesses account."
+description: "Get a free professional businesses account now."
+classify: "signup-page"
+scripts:
+  - "/scripts/password.js"
 ---
+
+<section>
+  {% include components/account.html %}
+
+  <h3 class="headline">
+    Create a free pro account to engage with your customers.
+  </h3>
+  <p class="emphasis">
+    Create an account for your business. Already have account?
+    <a href="/account/login.html">Login here.</a>
+  </p>
+
+  <form action="" class="account-form" id="accountForm">
+    <div>
+      <p>About you.</p>
+      <label for="fullname">Your full name</label>
+      <input
+        type="text"
+        name="fullname"
+        id="fullname"
+        placeholder="Full name here"
+      />
+
+      <label for="email">Your Email Address</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Email address here"
+      />
+
+      <label for="phone">Your phone number</label>
+      <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Phone number here"
+      />
+
+      <label for="password">A new password</label>
+      <div class="manage-password">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="New password here"
+          class="password"
+        />
+        <span class="show-password"><i class="far fa-eye-slash"></i></span>
+      </div>
+    </div>
+
+    <div class="about-buz">
+      <p>Business details.</p>
+      <label for="businesses">Business name</label>
+      <input
+        type="text"
+        name="businesses"
+        id="business"
+        placeholder="Businesses name here"
+      />
+
+      <label for="category"
+        >Main Category or Service (eg, fashion design, shoe dealer, etc)</label
+      >
+      <input
+        type="text"
+        name=" category"
+        id="category"
+        placeholder="Category or Service here"
+      />
+
+      <label for="city">Main location (City, Town, Area)</label>
+      <input
+        type="text"
+        name="city"
+        id="city"
+        placeholder="Main location here."
+      />
+
+      <div class="likewise">
+        <label for="buz-email">Business Email address.</label>
+        <div>
+          <input
+            type="checkbox"
+            name="same-email"
+            id="same-email"
+            class="checkmark emailCheck"
+            value="email-check"
+          />
+          <label for="same-email" class="email-check">
+            <span>Same as the first one</span>
+            <span class="checkmark" aria-disabled="true"></span>
+          </label>
+        </div>
+
+        <input
+          type="email"
+          name="buz-email"
+          id="buz-email"
+          placeholder=" Business email address here"
+          class="email-buz"
+        />
+      </div>
+
+      <div class="likewise">
+        <label for="tel">Business phone number</label>
+        <div>
+          <input
+            type="checkbox"
+            name="same-phone"
+            id="same-phone"
+            class="checkmark phoneCheck"
+            value="phone-check"
+          />
+          <label for="same-phone" class="phone-check">
+            <span>Same as the first one</span>
+            <span class="checkmark" aria-disabled="true"></span>
+          </label>
+        </div>
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Business phone number here"
+          class="phone-buz"
+        />
+      </div>
+    </div>
+
+    <button type="submit">Create account</button>
+  </form>
+</section>

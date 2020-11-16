@@ -1,0 +1,479 @@
+/*--------------- Global Settings ---------------*/
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.7rem);
+  --turkey: rgb(255, 20, 147);
+  --clear: rgb(255, 255, 255);
+  --blue: #039be5;
+  --dark: #303030;
+  --border: 0.1rem solid #ddd;
+  --accent: #16e0bd;
+  --shadow: 0rem 0.1375rem 1.5rem -0.25rem rgba(0, 0, 0, 0.99);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html,
+body {
+  color: var(--dark);
+  padding: 0;
+  margin: 0;
+  font-family: Gadugi, Verdana, Helvetica, Arial, sans-serif;
+  background-color: var(--white);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+p,
+pre,
+code {
+  line-height: 1.6;
+  word-spacing: 0.01rem;
+}
+
+a[href] {
+  color: var(--blue);
+  border-bottom: 0.1rem solid var(--blue);
+}
+
+a[href]:not(hover) {
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: var(--turkey);
+  border-bottom: 0.1rem solid var(--turkey);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 50vmin;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+figcaption {
+  text-align: center;
+  width: 100%;
+  color: var(--turkey);
+  margin: 0.2rem 0 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h3 + p {
+  margin-top: 0.5rem;
+}
+
+p + h3 {
+  margin-top: 3rem;
+}
+
+ol + h3,
+ul + h3 {
+  margin-top: 3rem;
+}
+
+h4 + p {
+  margin-top: 0.2rem;
+}
+
+.headline {
+  font-weight: normal;
+  margin: 1rem 0;
+  color: var(--accent);
+}
+
+.emphasis {
+  border: 0.1rem solid var(--accent);
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+/*--------------- Global Settings ---------------*/
+
+/*--------------- Header Settings ---------------*/
+
+header {
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  background-color: var(--clear);
+  z-index: 5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+}
+
+.header div span {
+  font-size: 0.85rem;
+}
+
+.header i {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+header .header a,
+header .nav a {
+  border: none;
+}
+
+.nav {
+  display: none;
+  background-color: var(--clear);
+}
+
+.nav.show {
+  display: block;
+  border-top: var(--border);
+  margin-top: 0.5rem;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav ul li {
+  margin-right: 1.3rem;
+  margin-top: 1rem;
+}
+
+/*--------------- Header Settings ---------------*/
+
+/*--------------- main Settings ---------------*/
+
+main > section {
+  padding: 5rem 1.5rem 2.5rem;
+}
+
+main .home-card h1,
+main .home-card h3 {
+  font-weight: normal;
+  color: var(--blue);
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+main .home-card div h3 {
+  margin-top: 3.5rem;
+}
+
+main .home-card div:first-child h3 {
+  margin-top: 0;
+}
+
+main .home-card img {
+  border-radius: 0.4rem;
+  height: 40vmin;
+}
+
+main .home-card a {
+  background-color: var(--blue);
+  border: none;
+  display: block;
+  width: max-content;
+  color: var(--dark);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.4rem;
+}
+
+.account-form p {
+  margin: 0 0 1rem 0;
+  border: var(--border);
+  padding: 0.5rem 1.5rem;
+  width: max-content;
+  border-radius: 0.3rem;
+  color: var(--turkey);
+}
+
+/*--------------- main Settings ---------------*/
+
+/*--------------- form Settings ---------------*/
+form {
+  padding: 1rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 0.15rem solid var(--accent);
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  display: block;
+  transition: var(--transBg);
+  caret-color: var(--turkey);
+  font-family: inherit;
+}
+
+form input[type="file"] {
+  opacity: 0;
+  margin-bottom: 0;
+  padding: 0;
+  height: 0;
+  width: 0;
+}
+
+form input[type="file"] + label {
+  width: max-content;
+  padding: 0.5rem;
+  background-color: #d7d7d7;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 0.3rem;
+  display: block;
+  transition: var(--transBg);
+}
+
+form input[type="file"] + label span {
+  color: var(--turkey);
+}
+
+form input:focus,
+form textarea:focus {
+  background-color: #ededed;
+  outline: 0;
+}
+
+form textarea {
+  padding: 0.5rem;
+  border: 0.15rem solid var(--accent);
+  border-radius: 0.3rem;
+  position: relative;
+  transition: var(--transBg);
+  display: block;
+  caret-color: var(--turkey);
+  font-family: inherit;
+  max-width: 100%;
+}
+
+form textarea + button {
+  margin-top: 1rem;
+}
+
+label i {
+  margin-left: 0.2rem;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  width: max-content;
+  padding: 0.5rem 1.5rem;
+  color: var(--dark);
+  background-color: var(--accent);
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--blue);
+}
+
+/* Account */
+
+.account ul {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.account ul li {
+  border-bottom: 0.3rem solid var(--blue);
+  padding: 0 2.5rem 0.5rem;
+}
+
+.account ul li a {
+  border: none;
+  color: var(--blue);
+}
+
+.login-page .login,
+.signup-page .signup {
+  border-bottom: 0.3rem solid var(--accent);
+}
+
+.login-page .login a,
+.signup-page .signup a {
+  color: var(--accent);
+}
+
+.about-buz {
+  margin-top: 3rem;
+}
+
+.likewise div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.likewise div label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  font-style: italic;
+}
+
+.likewise div input {
+  padding: 0;
+  opacity: 0;
+  z-index: -1;
+  height: 0;
+  width: 0;
+  margin: 0;
+}
+
+.likewise label .checkmark {
+  padding: 0.18rem;
+  border: 0.4rem solid var(--accent);
+  display: block;
+  margin-left: 1rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.likewise label .checkmark:after {
+  content: "";
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  border: 0.65rem solid var(--turkey);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.likewise [type="checkbox"]:checked + label .checkmark:after {
+  opacity: 1;
+}
+
+.manage-password {
+  display: flex;
+  align-items: flex-start;
+}
+
+.show-password {
+  padding: 0.415rem 1rem;
+  border: 0.2rem solid var(--accent);
+  cursor: pointer;
+  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  border-left: none;
+}
+
+.manage-password input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Account */
+
+/*--------------- form Settings ---------------*/
+
+/*--------------- footer Settings ---------------*/
+
+footer {
+  padding: 1.5rem;
+  background-color: var(--dark);
+  color: var(--clear);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+footer ul li {
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.foot-social li {
+  margin-right: 0.5rem;
+}
+
+.foot-social li a {
+  border: 0.1rem solid;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.3rem;
+}
+
+.foot-social i {
+  margin-right: 0.3rem;
+}
+
+.foot-newsletter {
+  border: var(--border);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  margin-top: 1.5rem;
+}
+
+.foot-newsletter form {
+  padding: 0;
+  border: none;
+}
+
+.foot-newsletter p {
+  margin-bottom: 1rem;
+}
+
+.foot {
+  margin-top: 1.5rem;
+}
+
+.foot span {
+  margin: 0 0.5rem;
+}
+
+/*--------------- footer Settings ---------------*/

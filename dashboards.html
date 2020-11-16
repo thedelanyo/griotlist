@@ -4,7 +4,7 @@ pagination:
   data: businesses
   size: 1
   alias: business
-permalink: "office/dashboard/{{ business | slug }}.html"
-headline: "Login to your dashboard"
+  permalink: "office/dashboard/{{ business['link'] | slug }}.html"
+title: "Login to your dashboard"
 description: "Login to your dashboard"
 ---

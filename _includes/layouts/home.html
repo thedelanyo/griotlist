@@ -3,7 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/webfonts.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <!-- ** Styles ** -->
+
+    <!-- Scripts -->
+    <script defer src="/scripts/drop.js"></script>
+    <script defer src="/scripts/email.js"></script>
+    <script defer src="/scripts/cookie.js"></script>
+    <!-- Scripts -->
+
     <title>Home for local businesses</title>
   </head>
-  <body></body>
+  <body>
+    {% include components/header.html %}
+
+    <main>{{ content | safe }}</main>
+
+    {% include components/footer.html %}
+  </body>
 </html>

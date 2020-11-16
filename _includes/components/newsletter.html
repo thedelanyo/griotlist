@@ -1,0 +1,32 @@
+<div id="newsletter" class="foot-newsletter">
+  <h3>Stay Inspired</h3>
+  <p>
+    Get all the latest offers, stories, and tips straight to your mailbox.
+    Monthly.
+  </p>
+  <form
+    id="newsletter"
+    name="newsletter"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+  >
+    <div hidden aria-hidden="true">
+      <i class="fas fa-laugh-wink"></i>
+      <label for="bot-field">
+        Don't fill this out if you are a human:
+        <input name="bot-field" />
+      </label>
+    </div>
+    <label for="email">Your email address</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Your email address here."
+      required
+    />
+
+    <button type="submit">Subscribe</button>
+  </form>
+</div>

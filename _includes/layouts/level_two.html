@@ -2,8 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./../styles/webfonts.css" />
+    <link rel="stylesheet" href="./../styles/styles.css" />
+    <!-- ** Styles ** -->
+
+    <!-- scripts -->
+    {% for script in scripts %}
+    <script defer src="{{ script }}"></script>
+    {% endfor %}
+    <script defer src="/scripts/drop.js"></script>
+    <script defer src="/scripts/email.js"></script>
+    <script defer src="/scripts/cookie.js"></script>
+    <!-- Scripts -->
     <title>{{ title }}</title>
   </head>
-  <body></body>
+  <body class="{{ classify }}">
+    {% include components/header.html %}
+
+    <main>{{ content | safe }}</main>
+
+    {% include components/footer.html %}
+  </body>
 </html>

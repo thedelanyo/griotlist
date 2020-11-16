@@ -1,7 +1,82 @@
 ---
 layout: layouts/level_two.html
-change: "yearly"
 permalink: "account/login.html"
 headline: "Login to your dashboard"
 description: "Login to your dashboard"
+classify: "login-page"
+scripts:
+  - "/scripts/password.js"
 ---
+
+<section>
+  {% include components/account.html %}
+
+  <h3 class="headline">Login to your business portfolio.</h3>
+  <p class="emphasis">
+    Login to your business portal. A new member?
+    <a href="/account/signup.html">Sign up here.</a>
+  </p>
+
+  <form action="" class="login-form" id="loginForm">
+    <label for="email">Your email address</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Email address here"
+    />
+
+    <label for="password">Your password</label>
+    <div class="manage-password">
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Password here"
+        class="password"
+      />
+      <span class="show-password"><i class="far fa-eye-slash"></i></span>
+    </div>
+
+    <button type="submit">Login</button>
+  </form>
+
+  <div>
+    <input
+      type="hidden"
+      name="email-check"
+      class="email-check"
+      aria-disabled="true"
+    />
+    <input
+      type="hidden"
+      name="email-check"
+      class="phone-check"
+      aria-disabled="true"
+    />
+    <input
+      type="hidden"
+      name="email-check"
+      class="email-buz"
+      aria-disabled="true"
+    />
+    <input
+      type="hidden"
+      name="email-check"
+      class="phone-buz"
+      aria-disabled="true"
+    />
+    <input
+      type="hidden"
+      name="email-check"
+      class="phoneCheck"
+      aria-disabled="true"
+    />
+    <input
+      type="hidden"
+      name="email-check"
+      class="emailCheck"
+      aria-disabled="true"
+    />
+  </div>
+</section>

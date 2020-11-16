@@ -1,0 +1,38 @@
+<footer>
+  <p>
+    When you make it easy to do business, your business grows. 
+  </p>
+
+  <div class="foot-links">
+    <div>
+      <ul>
+        <li><a href="/account/signup.html">Business Account</a></li>
+        <li><a href="/help/contact.html">Contact Us</a></li>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/help/fags.html">Answers (FAGs)</a></li>
+        <li><a href="/help/how.html">How It Works</a></li>
+        <li><a href="https://www.griotdigest.com/griotlist">Blog</a></li>
+      </ul>
+
+      <ul class="foot-social">
+        <li><a href="/"><i class="fab fa-twitter"></i></i>Twitter</a></li>
+        <li><a href="/"><i class="fas fa-envelope"></i></i>Email</a></li>
+        <li><a href="/"><i class="fas fa-phone-alt"></i></i>Call</a></li>
+      </ul>
+    </div>
+
+    {% include components/newsletter.html %}
+  </div>
+
+  <div class="foot">
+    <small>&copy;</small>
+    <small id="newYear">
+      <script>
+        document.getElementById("newYear").innerHTML = new Date().getFullYear();
+      </script>
+      GriotList <span>|</span> <a href="/site/terms.html">Terms of Use</a>
+      <span>|</span>
+      <a href="/site/privacy.html">Privacy Policy</a>
+    </small>
+  </div>
+</footer>
